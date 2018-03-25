@@ -8,9 +8,9 @@ namespace Ann.Activators
         {
             switch(type)
             {
-                case ActivatorType.LogisticActivator: return new LogisticActivator();
-                case ActivatorType.TanhActivator: return new TanhActivator();
-                case ActivatorType.ReluActivator: return new ReluActivator();
+                case ActivatorType.Sigmoid: return new LogisticActivator();
+                case ActivatorType.Tanh: return new TanhActivator();
+                case ActivatorType.Relu: return new ReluActivator();
                 default: throw new Exception(Messages.ActivatorTypeIsNotSupported);
             }
         }

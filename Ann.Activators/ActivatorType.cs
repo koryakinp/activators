@@ -8,14 +8,14 @@
         /// <summary>
         /// Logistic sigmoid activator
         /// </summary>
-        LogisticActivator = 0,
+        Sigmoid = 0,
         /// <summary>
         /// Hyperbolic Tangent activator
         /// </summary>
-        TanhActivator = 1,
+        Tanh = 1,
         /// <summary>
         /// Rectified Linear Unit activator
         /// </summary>
-        ReluActivator = 2
+        Relu = 2
     }
 }
