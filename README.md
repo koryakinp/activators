@@ -8,7 +8,7 @@ Artificial Neural Networks Activation Functions
 ## Installing
 
 ```
-PM> Install-Package activators.koryakinp
+PM> Install-Package ann.activators.koryakinp
 ```
 
 ## Example
