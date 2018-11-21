@@ -13,5 +13,10 @@ namespace Ann.Activators
         {
             return Math.Max(0, input);
         }
+
+        public override ActivatorType GetActivatorType()
+        {
+            return ActivatorType.Relu;
+        }
     }
 }

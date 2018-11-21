@@ -4,5 +4,7 @@
     {
         public abstract double CalculateValue(double input);
         public abstract double CalculateDeriviative(double input);
+
+        public abstract ActivatorType GetActivatorType();
     }
 }

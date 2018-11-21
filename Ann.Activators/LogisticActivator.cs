@@ -13,5 +13,10 @@ namespace Ann.Activators
         {
             return 1 / (1 + Math.Pow(Math.E, -input));
         }
+
+        public override ActivatorType GetActivatorType()
+        {
+            return ActivatorType.Sigmoid;
+        }
     }
 }

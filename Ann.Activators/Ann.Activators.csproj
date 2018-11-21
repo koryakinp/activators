@@ -2,6 +2,20 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Authors>Pavel Koryakin &lt;koryakinp@koryakinp.com&gt;</Authors>
+    <Company />
+    <Product />
+    <Description>Artificial Neural Networks Activation Functions</Description>
+    <Copyright>Coopyright 2018 © Pavel Koryakin. All Rights Reserved.</Copyright>
+    <PackageLicenseUrl>https://github.com/koryakinp/activators/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/koryakinp/activators</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/koryakinp/activators</PackageProjectUrl>
+    <PackageReleaseNotes>1. Rectified Linear Unit (ReLU)
+2. Logistic Sigmoid
+3. Hyperbolic Tangent</PackageReleaseNotes>
+    <PackageId>Ann.Activators.koryakinp</PackageId>
+    <PackageTags>activation-function relu tanh sigmoid ann</PackageTags>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

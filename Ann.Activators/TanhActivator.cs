@@ -13,5 +13,10 @@ namespace Ann.Activators
         {
             return Math.Tanh(input);
         }
+
+        public override ActivatorType GetActivatorType()
+        {
+            return ActivatorType.Tanh;
+        }
     }
 }
