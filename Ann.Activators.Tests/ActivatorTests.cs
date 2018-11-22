@@ -5,6 +5,48 @@ namespace Ann.Activators.Tests
     [TestClass]
     public class ActivatorTests
     {
+
+        private readonly double[] SoftmaxInput;
+        private readonly double[] SoftmaxOutput;
+        private readonly double[] SoftmaxDeriviative;
+        private readonly double[] SoftmaxGradient;
+
+        public ActivatorTests()
+        {
+            SoftmaxInput = new double[3] { 0.28820888, 0.08186503, 0.12464621 };
+            SoftmaxOutput = new double[3] { 0.375563358, 0.305540805, 0.318895836 };
+            SoftmaxDeriviative = new double[3] { 0.141945971, 0.178941437, -0.320887407 };
+            SoftmaxGradient = new double[3] {0.5167, 0.7244, -0.8675 };
+        }
+
+        [TestMethod]
+        public void SoftmaxActivatorValueTest()
+        {
+            var a1 = new SoftmaxActivator();
+
+            var actual = a1.CalculateValue(SoftmaxInput);
+
+            Assert.AreEqual(SoftmaxOutput.Length, actual.Length);
+            for (int i = 0; i < SoftmaxOutput.Length; i++)
+            {
+                Assert.AreEqual(SoftmaxOutput[i], actual[i], 5);
+            }
+        }
+
+        [TestMethod]
+        public void SoftmaxActivatorDeriviativeTest()
+        {
+            var a1 = new SoftmaxActivator();
+            var actual = a1.CalculateDeriviative(SoftmaxOutput, SoftmaxGradient);
+
+            Assert.AreEqual(SoftmaxDeriviative.Length, actual.Length);
+
+            for (int i = 0; i < SoftmaxDeriviative.Length; i++)
+            {
+                Assert.AreEqual(SoftmaxDeriviative[i], actual[i], 5);
+            }
+        }
+
         [TestMethod]
         public void LogisticActivatorValueTest()
         {

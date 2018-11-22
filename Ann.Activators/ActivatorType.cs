@@ -16,6 +16,10 @@
         /// <summary>
         /// Rectified Linear Unit activator
         /// </summary>
-        Relu = 2
+        Relu = 2,
+        /// <summary>
+        /// Softmax Activator
+        /// </summary>
+        Softmax = 3,
     }
 }
