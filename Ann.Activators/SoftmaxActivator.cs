@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MathNet.Numerics.LinearAlgebra;
+using MathNet.Numerics.LinearAlgebra.Double;
+using System;
 
 namespace Ann.Activators
 {
@@ -6,24 +8,17 @@ namespace Ann.Activators
     {
         public double[] CalculateDeriviative(double[] input, double[] error)
         {
-            var output = new double[input.Length];
+            var jacobian = Matrix.Build.Dense(input.Length, input.Length);
+            var vector = Vector.Build.Dense(error);
 
-            for (int i = 0; i < input.Length; i++)
+            jacobian.MapIndexedInplace((i, j, q) =>
             {
-                var temp = 0.0;
-                for (int j = 0; j < input.Length; j++)
-                {
-                    var o1 = input[i];
-                    var o2 = input[j];
-                    var ds = i == j ? o1 * (1 - o1) : -o1 * o2;
+                var o1 = input[i];
+                var o2 = input[j];
+                return i == j ? o1 * (1 - o1) : -o1 * o2;
+            });
 
-                    temp += ds * error[j];
-                }
-
-                output[i] = temp;
-            }
-
-            return output;
+            return jacobian.Multiply(vector).ToArray();
         }
 
         public double[] CalculateValue(double[] input)
