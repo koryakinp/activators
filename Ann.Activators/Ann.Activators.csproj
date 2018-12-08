@@ -15,7 +15,7 @@
 3. Hyperbolic Tangent</PackageReleaseNotes>
     <PackageId>Ann.Activators.koryakinp</PackageId>
     <PackageTags>activation-function relu tanh sigmoid ann</PackageTags>
-    <Version>1.0.2</Version>
+    <Version>1.0.4</Version>
   </PropertyGroup>
 
   <ItemGroup>

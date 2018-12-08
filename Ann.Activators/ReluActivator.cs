@@ -6,7 +6,7 @@ namespace Ann.Activators
     {
         public override double CalculateDeriviative(double input)
         {
-            return input < 0 ? 0 : 1;
+            return input == 0 ? 0 : 1;
         }
 
         public override double CalculateValue(double input)

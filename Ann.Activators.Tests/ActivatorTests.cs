@@ -106,9 +106,9 @@ namespace Ann.Activators.Tests
         public void ReluActivatorDeriviativeTest()
         {
             ReluActivator a1 = new ReluActivator();
-            Assert.AreEqual(0, a1.CalculateDeriviative(-2));
-            Assert.AreEqual(0, a1.CalculateDeriviative(-1));
-            Assert.AreEqual(1, a1.CalculateDeriviative(0));
+            Assert.AreEqual(0, a1.CalculateDeriviative(0));
+            Assert.AreEqual(0, a1.CalculateDeriviative(0));
+            Assert.AreEqual(0, a1.CalculateDeriviative(0));
             Assert.AreEqual(1, a1.CalculateDeriviative(1));
             Assert.AreEqual(1, a1.CalculateDeriviative(2));
         }

@@ -11,7 +11,7 @@ namespace Ann.Activators
 
         public override double CalculateValue(double input)
         {
-            return 1 / (1 + Math.Pow(Math.E, -input));
+            return 1 / (1 + Math.Exp(-input));
         }
 
         public override ActivatorType GetActivatorType()
